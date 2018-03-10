@@ -1,8 +1,8 @@
 {
-  "name": "vueadmin",
+  "name": "vue-training",
   "version": "1.0.5",
   "description": "vue admin project",
-  "author": "taylor <709161610@qq.com>",
+  "author": "1872367346@qq.com",
   "license": "MIT",
   "scripts": {
     "dev": "node build/dev-server.js",
