@@ -16,6 +16,7 @@ for (let i = 0; i < 86; i++) {
     Users.push(Mock.mock({
         id: Mock.Random.guid(),
         name: Mock.Random.cname(),
+        name_one: 'hangqq',
         addr: Mock.mock('@county(true)'),
         'age|18-60': 1,
         birth: Mock.Random.date(),
