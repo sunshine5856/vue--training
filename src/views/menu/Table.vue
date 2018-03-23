@@ -172,6 +172,19 @@
 					name: this.filters.name
 				};
 				this.listLoading = true;
+
+
+				//menuTree
+				// menuTree(para).then((res) => {
+				// 	// this.name = res.data.name;
+				// 	// this.users = res.data.users;
+				// 	// this.listLoading = false;
+				// 	//NProgress.done();
+				// 	console.log('testvfdggf');
+				// });
+
+
+
 				//NProgress.start();
 				getUserListPage(para).then((res) => {
 					this.total = res.data.total;
