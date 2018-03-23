@@ -11,7 +11,6 @@
 				</el-form-item>
 			</el-form>
 		</el-col>
-
 		<!--列表-->
 		<template>
 			<el-table :data="users" highlight-current-row v-loading="loading" style="width: 100%;">
@@ -28,6 +27,10 @@
 				<el-table-column prop="addr" label="地址" min-width="180" sortable>
 				</el-table-column>
 			</el-table>
+			 <!--<h3>跟后端进行一次数据对接</h3>-->
+             <!--<p>名称：{{acceptRequest}}</p>-->
+             <!--<p>名称1：{{legalStandardDesc}}</p>-->
+             <!--<p>出资人：{{materiarName}}</p>-->
 		</template>
 
 	</section>
@@ -38,12 +41,14 @@
 	export default {
 		data() {
 			return {
+			    acceptRequest:'',
+				legalStandardDesc:'',
+				materiarName:'',
 				filters: {
-					name: ''
+					// name: ''
 				},
 				loading: false,
-				users: [
-				]
+				users: [ ]
 			}
 		},
 		methods: {
@@ -54,14 +59,18 @@
 			//获取用户列表
 			getUser: function () {
 				let para = {
-					name: this.filters.name
+					 name: this.filters.name
 				};
 				this.loading = true;
 				//NProgress.start();
+				// var listParams = { name:'12'};
 				getUserList(para).then((res) => {
 					this.users = res.data.users;
 					this.loading = false;
+					this.acceptRequest=res.data.acceptRequest;
+					// dataType:'jsonp',
 					//NProgress.done();
+					console.log(res)
 				});
 			}
 		},
