@@ -13,12 +13,15 @@ import Dashboard from './views/Dashboard.vue'
 
 //目录清单
 import Table from './views/menu/Table.vue'
+import Table_one from './views/menu/Table_one.vue'
+import Table_two from './views/menu/Table_two.vue'
 import Form from './views/menu/Form.vue'
 import user from './views/menu/user.vue'
 import Page4 from './views/nav2/Page4.vue'
 import Page5 from './views/nav2/Page5.vue'
 import echarts from './views/draft/echarts.vue'
-// import Test from './views/draft/Test.vue'
+import Test from './views/draft/Test.vue'
+
 
 
 let routes = [
@@ -63,8 +66,8 @@ let routes = [
         name: '草稿库',
         iconCls: 'el-icon-message',//图标样式class
         children: [
-            {path: '/menu/draft/draft_one', component: Table, name: '草稿库1'},
-            {path: '/menu/draft/draft_two', component: Form, name: '草稿库2'},
+            {path: '/menu/draft/draft_one', component: Table_one, name: '草稿库1'},
+            {path: '/menu/draft/draft_two', component: Table_two, name: '草稿库2'},
             {path: '/menu/draft/draft_three', component: user, name: '草稿库3'},
         ]
     },
@@ -97,7 +100,8 @@ let routes = [
         name: '实施清单',
         iconCls: 'fa fa-bar-chart',
         children: [
-            {path: '/implement/echarts', component: echarts, name: 'echarts'}
+            {path: '/implement/echarts', component: echarts, name: 'echarts'},
+            {path: '/implement/list', component: Table_two, name: '事项维护'},
         ]
     },
 
