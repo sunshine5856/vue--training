@@ -132,9 +132,10 @@ export default {
 
     //新增用户
     mock.onGet('/user/add').reply(config => {
-      let { name, addr, age, birth, sex } = config.params;
+      let { name,addr, age, birth, sex } = config.params;
       _Users.push({
         name: name,
+        // name_one: name_one,
         addr: addr,
         age: age,
         birth: birth,
