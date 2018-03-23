@@ -105,19 +105,19 @@
     from {bottom: -150px;}
     to {bottom: 0;}
 }
-@keyframes off
+/*@keyframes off
 {
     from {bottom: 0;}
     to {bottom: -150px;}
-}
-.cot_box .box_left .box_1 ul li.on .li_box{
+}*/
+.cot_box .box_left .box_1 ul li:hover .li_box{
     animation:on .8s;
     animation-fill-mode:forwards;
 }
-.cot_box .box_left .box_1 ul li.off .li_box{
+/*.cot_box .box_left .box_1 ul li.off .li_box{
     animation:off .8s;
     animation-fill-mode:forwards;
-}
+}*/
 /*.cot_box .box_left .box_1 ul li img{
     !*width: 40px;
     height: 40px;*!
@@ -226,7 +226,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-#box2_tab1 table thead tr td:nth-child(2),#box2_tab1 table thead tr td:nth-child(3){
+#box2_tab1 table thead tr td:nth-child(2){
     text-align: left;
 }
 #box2_tab1 table tbody tr td{
@@ -244,7 +244,7 @@
     background-repeat: no-repeat;
     background-position: center center;
 }
-#box2_tab1 table tbody tr td:nth-child(2),#box2_tab1 table tbody tr td:nth-child(3){
+#box2_tab1 table tbody tr td:nth-child(2){
     text-align: left;
 }
 
@@ -254,7 +254,6 @@
     height: 410px;
     padding: 20px 3% 25px 3%;
     overflow: hidden;
-    display: none;
 
 }
 #box2_tab2 table{
@@ -272,7 +271,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-#box2_tab2 table thead tr td:nth-child(2),#box2_tab1 table thead tr td:nth-child(3){
+#box2_tab2 table thead tr td:nth-child(2){
     text-align: left;
 }
 #box2_tab2 table tbody tr td{
@@ -290,7 +289,7 @@
     background-repeat: no-repeat;
     background-position: center center;
 }
-#box2_tab2 table tbody tr td:nth-child(2),#box2_tab1 table tbody tr td:nth-child(3){
+#box2_tab2 table tbody tr td:nth-child(2){
     text-align: left;
 }
 .cot_box .box_left .box_3{
@@ -526,7 +525,6 @@
     width: 85%;
     height: 451px;
     padding: 45px 5% 49px 10%;
-    overflow: hidden;
 }
 #right_tab1 h5{
     width: 100%;
@@ -702,4 +700,24 @@
 }
 #right_tab2 ul li p .on{
     background-image: url("../images/right_star_on.png");
+}
+#right_tab1 .point{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #EAEDF1;
+    position: absolute;
+    left: 22%;
+    top: -10px;
+    transform:rotate(45deg);
+}
+#right_tab2 .point{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #EAEDF1;
+    position: absolute;
+    right: 20%;
+    top: -10px;
+    transform:rotate(45deg);
 }
